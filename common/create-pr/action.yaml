@@ -1,0 +1,30 @@
+name: create-pr
+authore: SooYoung
+description: "Use create-pr module in github action"
+inputs:
+  PERSONAL_ACCESS_TOKEN:
+    description: "set personal access token"
+    required: true
+    default: ""
+  HEAD:
+    description: "set head branch"
+    required: true
+    default: "release/v0.0.0"
+  BASE:
+    description: "set base branch"
+    required: true
+    default: "master"
+
+runs:
+  using: "composite"
+  steps:
+    - name: gh auth login
+      run: |
+        echo ${{ inputs.PERSONAL_ACCESS_TOKEN }} | gh auth login --with-token
+    - name: create branch
+      run: |
+        git checkout -b release/${{ inputs.HEAD }}
+        git push origin release/${{ inputs.head }}
+    - name: create pr
+      run: |
+        gh pr create --base ${{ inputs.BASE }} --head ${{ inputs.HEAD }} --title ${{ inputs.HEAD }} -> ${{ inptus.BASE }}" --body "release pr"
