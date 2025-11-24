@@ -3,17 +3,17 @@ authore: SooYoung
 description: "Use image build module in github action"
 inputs:
   REPOSITORY:
-    description: "set aws ecr repository"
+    description: "Set aws ecr registry"
     required: true
-    default: "my-app"
+    default: ""
   REGISTRY:
-    description: "set aws ecr registry"
+    description: "Set aws ecr repository"
     required: true
     default: ""
   DOCKERFILE_PATH:
-    description: "set dockerfile path"
+    description: "Set aws ecr repository"
     required: false
-    default: "Dokcerfile"
+    default: "Dockerfile"
 
 runs:
   using: "composite"

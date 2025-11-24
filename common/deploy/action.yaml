@@ -3,31 +3,31 @@ authore: SooYoung
 description: "Use deploy module in github action"
 inputs:
   KUBECTL_VERSION:
-    description: "set kubectl version"
+    description: "Set kubectl version"
     required: false
-    default: "latest"
+    default: latest
   HELM_VERSION:
-    description: "set helm version"
+    description: "Set helm version"
     required: false
     default: v3.11.1
   CLUSTER_NAME:
-    description: "set cluster name"
+    description: "Set eks cluster name"
     required: true
     default: "github-actions"
   RELEASE_NAME:
-    description: "set release_name"
+    description: "Set release name"
     required: true
     default: "my-app"
   HELM_CHART_PATH:
-    description: "set helm chart path"
+    description: "Set helm chart path"
     required: true
-    default: "kubernetes/my-app"
+    default: "helm-chart"
   NAMESPACE:
-    description: "set namespace"
+    description: "Set eks namespace"
     required: true
     default: "my-app-dev"
   REPOSITORY:
-    description: "set ecr registry/repository"
+    description: "Set image repository"
     required: true
     default: ""
 
@@ -42,7 +42,7 @@ runs:
       uses: azure/setup-helm@v3
       with:
         version: ${{ inputs.HELM_VERSION }}
-    - name: access Kubernetes
+    - name: access kubernetes
       shell: bash
       run: |
         aws eks update-kubeconfig --name ${{ inputs.CLUSTER_NAME }}
