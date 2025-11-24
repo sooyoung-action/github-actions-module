@@ -1,5 +1,5 @@
 name: create-pr
-authore: SooYoung
+author: SooYoung
 description: "Use create-pr module in github action"
 inputs:
   PERSONAL_ACCESS_TOKEN:

@@ -1,6 +1,6 @@
 name: test
-authore: SooYoung
-description: "Use test module in github action"
+author: SooYoung
+description: "Use test job in github action"
 inputs:
   NODE_VERSION:
     description: "Set node version"

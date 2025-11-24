@@ -1,5 +1,5 @@
 name: aws
-authore: SooYoung
+author: SooYoung
 description: "Use aws module int github action"
 inputs:
   AWS_REGION:

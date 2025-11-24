@@ -1,5 +1,5 @@
 name: deploy
-authore: SooYoung
+author: SooYoung
 description: "Use deploy module in github action"
 inputs:
   KUBECTL_VERSION:

@@ -1,5 +1,5 @@
 name: image build
-authore: SooYoung
+author: SooYoung
 description: "Use image build module in github action"
 inputs:
   REPOSITORY:

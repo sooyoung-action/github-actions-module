@@ -1,5 +1,5 @@
 name: slack
-authore: SooYoung
+author: SooYoung
 description: "Use slack module in github action"
 inputs:
   REF_TYPE:

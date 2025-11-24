@@ -1,5 +1,5 @@
 name: set-environment
-authore: SooYoung
+author: SooYoung
 description: "Use set-environment module int github action"
 inputs:
   REF_TYPE:
